@@ -52,6 +52,7 @@ function getBibleVerse(y) {
   else {
     return "With God all things are possible. Matthew 19:26";
   }
+}
 
 function getSpiritAnimal(x) {
   //if, else if, & else statements
