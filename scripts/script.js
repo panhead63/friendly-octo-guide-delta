@@ -24,8 +24,7 @@ function generateCoolNameFacts(userName) {
   let coolFacts = ''; 
   
   coolFacts = nameLength(userName);
-  coolFacts += " <br>" + nameStart(userName);
-  coolFacts += "<br>" + nameEnd(userName);
+  coolFacts += "<br>" + (getBibleVerse(userName));
   coolFacts += "<br>" + (getSpiritAnimal(userName));
 
   console.log("initialized the'm coolFacts variable: " + coolFacts); 
@@ -38,16 +37,21 @@ function nameLength(name) {
   return "Your name is " + name.length + " letters long!"; 
 }
 
-function nameStart(name) {
-  return "The first letter of your name is " + name[0] + "!";
-}
+function getBibleVerse(y) {
+  //if, else if, & else statements
+  //quotes 
 
-function nameEnd(name) {
+  if (y.length < 6) {
+    return "Don't be anxious about anything. Philipians 4:6-7";
+  } 
   
-  let lastIndex = name.length - 1
-
-  return "The last letter of your name is " + name[lastIndex] + "!";
-}
+  else if (y.length > 6) {
+    return "Be strong and courageous. Deuteronomy 31:6";
+  }
+    
+  else {
+    return "With God all things are possible. Matthew 19:26";
+  }
 
 function getSpiritAnimal(x) {
   //if, else if, & else statements
